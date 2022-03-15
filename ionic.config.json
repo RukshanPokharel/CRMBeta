@@ -1,0 +1,7 @@
+{
+  "name": "PairProgrammingCRM",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
