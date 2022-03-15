@@ -1,21 +1,63 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      CRM beta
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-split-pane when="sm" contentId="main-content">
+  <ion-menu contentId="main-content">
+    <ion-header [translucent]="true">
+      <ion-toolbar>
+        <ion-title> CRM beta </ion-title>
+      </ion-toolbar>
+    </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">CRM beta</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-list-header>Menu</ion-list-header>
+        <ion-menu-toggle [autoHide]="false">
+          <ion-item button>
+            <ion-icon slot="start" name="apps"></ion-icon>
+            <ion-label> Dashboard </ion-label>
+          </ion-item>
+          <ion-item button>
+            <ion-icon slot="start" name="people"></ion-icon>
+            <ion-label> Customer </ion-label>
+          </ion-item>
+          <ion-item button>
+            <ion-icon slot="start" name="card"></ion-icon>
+            <ion-label> Earnings </ion-label>
+          </ion-item>
+          <ion-item button>
+            <ion-icon slot="start" name="analytics"></ion-icon>
+            <ion-label> Product Sales </ion-label>
+          </ion-item>
+          <ion-item button>
+            <ion-icon slot="start" name="star-half"></ion-icon>
+            <ion-label> Store Management </ion-label>
+          </ion-item>
+          <ion-item button>
+            <ion-icon slot="start" name="settings"></ion-icon>
+            <ion-label> Settings </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
 
-  <div id="container">
-    <strong>Authors</strong>
-    <p>Rukshan</p>
-    <p>Paranshu</p>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-toggle>
+            <ion-button>
+              <ion-icon slot="icon-only" name="menu"></ion-icon>
+            </ion-button>
+          </ion-menu-toggle>
+        </ion-buttons>
+        <ion-title size="large">Dashboard</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <div id="container">
+        <strong>Authors</strong>
+        <p>Rukshan</p>
+        <p>Paranshu</p>
+      </div>
+    </ion-content>
   </div>
-</ion-content>
+</ion-split-pane>
