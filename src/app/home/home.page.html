@@ -1,8 +1,11 @@
 <ion-split-pane when="sm" contentId="main-content">
-  <ion-menu contentId="main-content">
-    <ion-header [translucent]="true">
+  <ion-menu contentId="main-content" class="custom-side">
+    <ion-header [translucent]="true" class="ion-no-border">
       <ion-toolbar>
-        <ion-title> CRM beta </ion-title>
+        <ion-item button lines="none">
+          <ion-icon slot="start" src="assets/icon.svg"></ion-icon>
+          <ion-title> CRM<strong>Beta</strong></ion-title>
+        </ion-item>
       </ion-toolbar>
     </ion-header>
 
@@ -10,27 +13,27 @@
       <ion-list>
         <ion-list-header>Menu</ion-list-header>
         <ion-menu-toggle [autoHide]="false">
-          <ion-item button>
+          <ion-item button lines="none">
             <ion-icon slot="start" name="apps"></ion-icon>
             <ion-label> Dashboard </ion-label>
           </ion-item>
-          <ion-item button>
+          <ion-item button lines="none">
             <ion-icon slot="start" name="people"></ion-icon>
             <ion-label> Customer </ion-label>
           </ion-item>
-          <ion-item button>
+          <ion-item button lines="none">
             <ion-icon slot="start" name="card"></ion-icon>
             <ion-label> Earnings </ion-label>
           </ion-item>
-          <ion-item button>
+          <ion-item button lines="none">
             <ion-icon slot="start" name="analytics"></ion-icon>
             <ion-label> Product Sales </ion-label>
           </ion-item>
-          <ion-item button>
+          <ion-item butto lines="none" n>
             <ion-icon slot="start" name="star-half"></ion-icon>
             <ion-label> Store Management </ion-label>
           </ion-item>
-          <ion-item button>
+          <ion-item button lines="none">
             <ion-icon slot="start" name="settings"></ion-icon>
             <ion-label> Settings </ion-label>
           </ion-item>
@@ -40,7 +43,7 @@
   </ion-menu>
 
   <div class="ion-page" id="main-content">
-    <ion-header>
+    <ion-header class="ion-no-border">
       <ion-toolbar>
         <ion-buttons slot="start">
           <ion-menu-toggle>
