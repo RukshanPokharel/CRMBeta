@@ -1,11 +1,7 @@
 #container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: end;
 }
 
 #container strong {
@@ -19,9 +15,15 @@
 
   color: #8c8c8c;
 
-  margin: 0;
+  margin: 0 4px;
 }
 
 #container a {
   text-decoration: none;
+}
+
+.custom-side {
+  --border: none;
+  --side-min-width: 250px;
+  --side-width: 250px;
 }
