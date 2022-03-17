@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
+
+import { Platform } from '@ionic/angular';
+
+import { Storage } from '@ionic/storage-angular';
+
 
 @Component({
   selector: 'app-root',
@@ -38,7 +43,19 @@ export class AppComponent implements OnInit {
       icon: 'settings',
     },
   ];
-  constructor() {}
+
+
+  constructor(private renderer: Renderer2) {}
+
+
+  onToggleColorTheme(event) {
+    if (event.detail.checked) {
+        this.renderer.setAttribute(document.body, 'color-theme', 'dark')
+    } else {
+        this.renderer.setAttribute(document.body, 'color-theme', 'light')
+    }
+  }
+
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
