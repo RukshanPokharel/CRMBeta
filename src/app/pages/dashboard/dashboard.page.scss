@@ -1,8 +1,8 @@
-#container {
-  display: flex;
-  justify-content: center;
-  align-items: end;
-}
+// #container {
+//   display: grid;
+//   grid-template-columns: repeat(3, 1fr);
+//   place-items: center;
+// }
 
 #container strong {
   font-size: 20px;
@@ -22,8 +22,7 @@
   text-decoration: none;
 }
 
-.custom-side {
-  --border: none;
-  --side-min-width: 250px;
-  --side-width: 250px;
+.custom-avatar {
+  height: 40px;
+  width: 40px;
 }
