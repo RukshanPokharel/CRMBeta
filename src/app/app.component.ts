@@ -4,7 +4,6 @@ import { Platform } from '@ionic/angular';
 
 import { Storage } from '@ionic/storage-angular';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -15,7 +14,7 @@ export class AppComponent implements OnInit {
     {
       title: 'Dashboard',
       url: '/dashboard',
-      icon: 'apps'
+      icon: 'apps',
     },
     {
       title: 'Customers',
@@ -44,15 +43,13 @@ export class AppComponent implements OnInit {
     },
   ];
 
-
   constructor(private renderer: Renderer2) {}
-
 
   onToggleColorTheme(event) {
     if (event.detail.checked) {
-        this.renderer.setAttribute(document.body, 'color-theme', 'dark')
+      this.renderer.setAttribute(document.body, 'color-theme', 'dark');
     } else {
-        this.renderer.setAttribute(document.body, 'color-theme', 'light')
+      this.renderer.setAttribute(document.body, 'color-theme', 'light');
     }
   }
 
