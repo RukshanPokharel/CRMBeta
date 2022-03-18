@@ -25,9 +25,28 @@
 </ion-header>
 <ion-content class="ion-padding">
   <ion-grid>
+    <div>
+      <canvas
+        baseChart
+        width="400"
+        height="400"
+        [datasets]="lineChartData"
+        [labels]="lineChartLabels"
+        [colors]="lineChartColors"
+        [legend]="lineChartLegend"
+        [chartType]="lineChartType"
+        [plugins]="lineChartPlugins"
+      >
+      </canvas>
+    </div>
     <div id="container">
       <ion-row>
         <ion-col>
+          <ion-card> </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
           <ion-card button>
             <ion-card-header>
               <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
@@ -114,15 +133,6 @@
           </ion-card>
         </ion-col>
       </ion-row>
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title> Authors </ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          <p>Rukshan</p>
-          <p>Paranshu</p>
-        </ion-card-content>
-      </ion-card>
     </div>
   </ion-grid>
 </ion-content>
